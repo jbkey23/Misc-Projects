@@ -1,0 +1,80 @@
+doctype html
+html
+  head
+    title Real-Time Web Application: Web chat
+    script(src='/javascripts/users.js')
+    script(src='/socket.io/socket.io.js')
+    link(href='/css/main.css', rel='stylesheet')
+    audio#sendsound
+      source#sendMP3(src='/audio/pop.mp3', type='audio/mpeg')
+      source#sendOGG(src='/audio/pop.ogg', type='audio/ogg')
+    audio#recsound
+      source#recMP3(src='/audio/ting.mp3', type='audio/mpeg')
+      source#recOGG(src='/audio/ting.ogg', type='audio/ogg')
+  body
+    div#chatboxarea
+      #chatbox(style='width: 100%; height: 25vh; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll; border-radius:.5em')
+    .entryboxesvagrant
+    div#usergroup
+      input#username(style='width: 25%; font-weight: bold',placeholder="Username")
+      select#group
+        option(value='default',selected='selected') Create a New Group
+      input#groupname(style='width: 35%',placeholder="Group Name")
+      input#joingroup(type ='button',value="Join Group")
+    div#other
+      br
+      br
+      select(id='fontselector')
+        option(value='arial',selected='selected') Arial
+        option(value='georgia') Georgia
+        option(value='palatino') Palatino Linotype
+        option(value='timesnewroman') Times New Roman
+        option(value='arialblack') Arial Black
+        option(value='comicsans') Comic Sans MS
+        option(value='impact') Impact
+        option(value='lucidasans') Lucida Sans Unicode
+        option(value='tahoma') Tahoma
+        option(value='trebuchet') Trebuchet MS
+        option(value='verdana') Verdana
+        option(value='courier') Courier New
+        option(value='lucidaconsole') Lucida Console
+      input#increasefont(type='button',value="+",title='Increase font size')
+      input#decreasefont(type='button',value='-',title='Decrease font size')
+      input#italicbutton(type ='button',value='I',title='Italic')
+      input#boldbutton(type='button',value='B',title='Bold')
+      input#colorpicker(type ='color',title="Font color")
+      br
+      input#message(style='width: 50%;',placeholder="Message")
+      select#groupmembers
+        option(value='default') All Group Members
+      input#sendbutton(type='button', value='Send')
+      br
+      br
+      li(style='font-weight: bold') Send sound:
+      select#sendselector
+        option(value='pop', selected='selected') Pop
+        option(value='ting') Ting
+        option(value='pew') Pew
+        option(value='squeak') Squeak
+      br
+      li(style='font-weight: bold') Receive sound:
+      select#recselector
+        option(value='pop') Pop
+        option(value='ting', selected='selected') Ting
+        option(value='pew') Pew
+        option(value='squeak') Squeak
+      br
+      br
+      li(style='font-weight: bold') Message History:
+      input#historycount(style='width: 5%')
+      input#historybutton(type='button',value='set')
+      br
+      br
+      li(style='font-weight: bold') Leave Chat:
+      input#leavechat(type='button', value='Exit')
+      br
+      br
+      li#removetitle(style='font-weight: bold; visibility: hidden') Remove user:
+      select#removeuserssel(style='visibility: hidden')
+        option(value='default') None
+      input#removeusersbut(type='button', style='visibility: hidden', value='Remove User')

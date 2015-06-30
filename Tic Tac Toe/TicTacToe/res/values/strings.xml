@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TicTacToe</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="newGame">New Game</string>
+    <string name="statusText">Welcome to TIC TAC TOE!\nPress New Game to start!</string>
+
+</resources>

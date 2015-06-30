@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title Real-Time Web Application: Admin Page
+    script(src='/javascripts/admin.js')
+    script(src='/socket.io/socket.io.js')
+  body
+    center
+      b Groups in the System:
+      br
+      br
+      input#refreshGroups(type='button',value='Refresh',onclick='populateGroupsList()')
+    br
+    div(align='center')#groupData
+      table#myTableData(border='1', cellpadding='2')
+        tr
+          th Group Name
+          th Users
+          th Owner
+          th
+          th
+    br
+    div(align='center')#setMaxes
+      table#maxes
+        tr
+          td Max Groups:
+          td
+            input#maxgroups(style='width: 30%')
+          td
+            input#setmaxgroups(type='button',value='Set',onclick='setMaxGroups()')
+        tr
+          td Max Users:
+          td
+            input#maxusers(style='width: 30%')
+          td
+            input#setmaxgroups(type='button',value='Set',onclick='setMaxUsers()')

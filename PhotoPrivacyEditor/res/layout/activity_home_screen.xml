@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+	<LinearLayout
+	    android:id="@+id/topButtonsLayout"
+	    android:layout_width ="fill_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1">
+	    
+	    <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/startButton"
+            android:onClick="startTask" />
+	    
+	    <Button
+            android:id="@+id/finishButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/finishButton"
+            android:onClick="finishTask" />
+	</LinearLayout>
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:layout_weight="7"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="20dp" />
+
+   <LinearLayout
+        android:id="@+id/ButtonsLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/viewButton"
+            android:enabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/viewButton"
+            android:onClick="viewPhotoData" />
+        
+         <Button
+            android:id="@+id/locateButton"
+            android:enabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/locateButton"
+            android:onClick="locateImage" />
+
+        <Button
+            android:id="@+id/editButton"
+            android:enabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/editButton"
+            android:onClick="editPhotoData" />
+
+        <Button
+            android:id="@+id/removeButton"
+            android:enabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/removeButton"
+            android:onClick="removePhotoData" />
+
+       
+    </LinearLayout>
+
+</LinearLayout>

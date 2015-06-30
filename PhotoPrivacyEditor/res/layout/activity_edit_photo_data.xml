@@ -1,0 +1,167 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroller"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".ViewPhotoDataActivity" >
+
+    
+
+        <ImageView
+            android:id="@+id/selectedPhoto_Edit"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:contentDescription="@string/selectedPhotoDesc"
+            android:src="@drawable/no_photo_icon" />
+
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/imageName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/imageName"
+                android:layout_weight="3"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/imageNameValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/nullValue" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/dateTaken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dateTaken"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/dateTakenValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="date"
+                android:text="@string/nullValue" />
+            
+              <ImageButton
+        		 android:id="@+id/chooseDateButton"
+         		android:layout_width="wrap_content"
+		 		android:layout_height="wrap_content"
+         		android:cropToPadding="true"
+         		android:onClick="chooseDate"
+         		android:src="@drawable/calendaricon" />
+    		
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/timeTaken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timeTaken"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/timeTakenValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="time"
+                android:text="@string/nullValue" />
+            
+             <ImageButton
+        		 android:id="@+id/chooseTimeButton"
+         		android:layout_width="0dp"
+		 		android:layout_height="wrap_content"
+		 		android:layout_weight = ".5"
+		 		android:onClick = "chooseTime"
+         		android:src="@drawable/one" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/latitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/latitude"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/latitudeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="numberDecimal|numberSigned"
+                android:text="@string/nullValue" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/longitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/longitude"
+                android:textSize="16sp" />
+
+           	<EditText
+                android:id="@+id/longitudeValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:inputType="numberDecimal|numberSigned"
+                android:text="@string/nullValue" >
+
+          
+            </EditText>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:onClick="saveChanges" />
+    
+    </LinearLayout>
+
+</ScrollView>
