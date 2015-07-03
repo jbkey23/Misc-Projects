@@ -4,7 +4,8 @@ html
     title Real-Time Web Application: Web chat
     script(src='/javascripts/users.js')
     script(src='/socket.io/socket.io.js')
-    link(href='/css/main.css', rel='stylesheet')
+    style.
+      li {color:black}
     audio#sendsound
       source#sendMP3(src='/audio/pop.mp3', type='audio/mpeg')
       source#sendOGG(src='/audio/pop.ogg', type='audio/ogg')
@@ -12,16 +13,13 @@ html
       source#recMP3(src='/audio/ting.mp3', type='audio/mpeg')
       source#recOGG(src='/audio/ting.ogg', type='audio/ogg')
   body
-    div#chatboxarea
-      #chatbox(style='width: 100%; height: 25vh; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll; border-radius:.5em')
+    #chatbox(style='width: 100%; height: 25vh; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll;background-color: grey; border-radius:.5em')
     .entryboxesvagrant
-    div#usergroup
       input#username(style='width: 25%; font-weight: bold',placeholder="Username")
       select#group
         option(value='default',selected='selected') Create a New Group
       input#groupname(style='width: 35%',placeholder="Group Name")
       input#joingroup(type ='button',value="Join Group")
-    div#other
       br
       br
       select(id='fontselector')
